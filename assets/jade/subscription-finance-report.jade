@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		meta(charset="UTF-8")
+		link(rel="stylesheet", href="https://necolas.github.io/normalize.css/3.0.2/normalize.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css")
+		link(rel="stylesheet", href="style.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,500")
+		title Subscription finance report
+	body
+		.container
+			header header
+			.panel
+				aside sidebar
+				section.report.subscription-finance-report
+					.top-panel
+						h1.report-heading FINANCEIRO
+						.download-report
+							.report-search
+								a(href="#" class="show-search")
+									i.material-icons search
+								input(type="text" placeholder="Buscar…")
+							.download-button
+								a(href="#" class="waves-effect waves-light")
+									i.material-icons file_download
+									span Baixar relatório
+					.stat-panel
+						.stat.billing
+							.stat-name Faturamento
+							.billing-line
+								.current-day
+									.tooltip
+										p.
+											Este é o valor acumulado até hoje.
+									.value R$ 5.750,00
+									.period total até hoje
+								.last-month
+									.tooltip
+										p.
+											Este é o valor acumulado no último mês.
+									.value R$ 2.235,00
+									.period último mês
+								.current-month
+									.tooltip
+										p.
+											Este é o valor acumulado do mês corrente. Este valor pode mudar até que o mês termine.
+									.value R$ 2.235,00
+									.period mês atual
+								.next-six-month
+									.tooltip
+										p.
+											Este é o valor que será acumulado nos próximos 6 meses, baseado no número de assinantes atual.
+									.value R$ 25.750,00
+									.period próximos 6 meses
+						.stat.subscribers
+							.info
+								.info-icon
+								.tooltip
+									p.
+										Aqui você acompanha o total de usuários assinantes, a quantidade de assinaturas canceladas por mês e o tempo médio que um usuário continua sendo seu assinante antes de cancelar.
+							.total-active
+								.changes.positive
+									i.material-icons arrow_upward
+									span 36 este mês
+								.subscribers-number
+									b 2.572
+									span Assinantes
+							.inactive-subscribers
+								.canceled-subscribers
+									.changes.negative
+										i.material-icons arrow_downward
+										span 3 este mês
+									.inactive-value
+										b 45
+									.inactive-type Cancelados
+								.subscribers-duration
+									.changes.negative
+										i.material-icons arrow_downward
+										span 2 dias
+									.inactive-value
+										b 267
+										span dias
+									.inactive-type Tempo médio ativo
+					.users
+						.filters
+							.users-filter
+								span Filtrar:
+								.view
+									.current-view
+										span Últimos 15 dias
+										i.material-icons keyboard_arrow_down
+									ul.view-list
+										li
+											a(href="#!") Últimos 15 dias
+										li
+											a(href="#!") Últimos 30 dias
+										li
+											a(href="#!") Últimos 60 dias
+										li
+											a(href="#!") Últimos 90 dias
+										li
+											a(href="#!") Customizado
+							.custom-date
+								span De:
+								input(type="text" class="browser-default datepicker" placeholder="31 set 2017")
+								span a
+								input(type="text" class="browser-default datepicker" placeholder="8 ago 2017")
+						table.report-users.finance-report
+							thead
+								tr
+									td
+										a(href="#" class="active")
+											span NOME
+											i.material-icons keyboard_arrow_up
+									td
+										a(href="#") 
+											span STATUS
+											i.material-icons keyboard_arrow_down
+									td
+										a(href="#") 
+											span DATA
+											i.material-icons keyboard_arrow_down
+									td
+										a(href="#") 
+											span VALOR
+											i.material-icons keyboard_arrow_down
+							tbody
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status ativo
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 270,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status ativo
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 270,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client.canceled
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status CANCELADO
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 270,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status ativo
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 270,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client.canceled
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status CANCELADO
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 270,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status ativo
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 270,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status ativo
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 270,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client.canceled
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status CANCELADO
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 35,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status ativo
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 270,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client.canceled
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status CANCELADO
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 270,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.user-status ativo
+									td
+										.user-data 22 jul 2017
+									td
+										.user-value
+											.value R$ 270,00
+											.per / mês
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.trial
+											.status-name TRIAL
+											.date 18 jan 2017
+										.status.trial-canceled
+											.status-name TRIAL CANCELADO
+											.date 18 jan 2017
+										.status.active
+											.status-name ATIVO
+											.date 18 jan 2017
+										.status.canceled
+											.status-name CANCELADO
+											.date 18 jan 2017
+						ul.pagination
+							li.disabled
+								a(href="#!")
+									i.material-icons chevron_left
+							li.active
+								a(href="#!") 1
+							li.waves-effect
+								a(href="#!") 2
+							li.waves-effect
+								a(href="#!") 3
+							li.waves-effect
+								a(href="#!") 4
+							li.waves-effect
+								a(href="#!") 5
+							li.waves-effect
+								a(href="#!") 6
+							li.waves-effect
+								a(href="#!") 7
+							li.waves-effect
+								a(href="#!") ...
+							li.waves-effect
+								a(href="#!") 12
+							li.waves-effect
+								a(href="#!")
+									i.material-icons chevron_right
+		script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js")
+		script(src="assets/js/reports.js")

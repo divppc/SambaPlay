@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		meta(charset="UTF-8")
+		link(rel="stylesheet", href="https://necolas.github.io/normalize.css/3.0.2/normalize.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css")
+		link(rel="stylesheet", href="style.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,500")
+		title Transactional client report
+	body
+		.container
+			header header
+			.panel
+				aside sidebar
+				section.report.transactional-client-report
+					.top-panel
+						h1.report-heading CLIENTES
+						.download-report
+							.report-search
+								a(href="#" class="show-search")
+									i.material-icons search
+								input(type="text" placeholder="Buscar…")
+							.download-button
+								a(href="#" class="waves-effect waves-light")
+									i.material-icons file_download
+									span Baixar relatório
+					.stat-panel
+						.stat.total
+							.info
+								.info-icon
+								.tooltip
+									p.
+										Aqui você vê qual o total de coleções vendidas desde o começo do seu produto.
+							.changes.positive
+								i.material-icons arrow_upward
+								span Aumentou 3,5% na última semana
+							.value 219.805
+							.stat-title Coleções vendidas
+						.stat.active
+							.info
+								.info-icon
+								.tooltip
+									p.
+										Esta é a porcentagem de usuários cadastrados que compraram alguma coleção e agora estão consumindo.
+									p.
+										<i>Não inclui os usuários que compraram uma coleção e já terminaram seu prazo de consumo.</i>
+							.changes.negative
+								i.material-icons arrow_downward
+								span 2%
+							.value 51%
+							.stat-title Compraram
+							.status-line
+								.active-part
+								.counter 112.100
+						.stat.inactive
+							.info
+								.info-icon
+								.tooltip
+									p.
+										Clientes que estão cadastrados mas não estão consumindo nenhuma coleção neste momento.
+									p.
+										<i>Inclui usuários que possuíram uma coleção mas seu tempo de consumo já expirou.</i>
+							.changes.negative
+								i.material-icons arrow_upward
+								span 2%
+							.value 49%
+							.stat-title Não Compraram
+							.status-line
+								.active-part
+								.counter 107.704
+						.stat.top-photos
+							.info
+								.info-icon
+								.tooltip
+									p.
+										Aqui você vê suas três coleções mais rentáveis a partir do número total de vendas que elas já tiveram em todo o tempo do site.
+							.photo.top1
+								img(src="http://pipsum.com/275x80", alt="")
+								.photo-data
+									.title Viajando para a República Tcheca com po…
+									.photo-stat
+										.popularity #1 mais vendida
+										.sales
+											span 753
+											i vendas
+							.photo.top2
+								img(src="http://pipsum.com/150x80", alt="")
+								.photo-data
+									.title Bares e pubs em…
+									.photo-stat
+										.popularity #2
+										.sales
+											span 255
+											i vendas
+							.photo.top3
+								img(src="http://pipsum.com/125x80", alt="")
+								.photo-data
+									.title Verão na Itália…
+									.photo-stat
+										.popularity #3
+										.sales
+											span 139
+											i vendas
+					.users
+						.filters
+							ul
+								li.all
+									a(href="#" class="active") Todos
+								li.subscribers
+									a(href="#") Compraram
+								li.not-subscribers
+									a(href="#") Não Compraram
+								li.total-number (219.805)
+							.copy-all
+								.copied E-MAILS COPIADOS
+								a(href="#" class="waves-effect waves-light tooltipped" data-position="top" data-tooltip="Clique para copiar os endereços de e-mail mostrados no filtro ao lado.")
+									i.material-icons content_copy
+									span Copiar e-mails
+						table.report-users.client-report
+							thead
+								tr
+									td
+										a(href="#" class="active")
+											span NOME
+											i.material-icons keyboard_arrow_up
+									td
+										a(href="#") E-MAIL
+									td
+										a(href="#") 
+											span STATUS
+											i.material-icons keyboard_arrow_down
+							tbody
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.not-subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status NÃO COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.not-subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status NÃO COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.not-subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status NÃO COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.not-subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status NÃO COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status COMPROU
+										.status-changed Desde 26 jan 2017
+								td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.not-subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status NÃO COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.not-subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status NÃO COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.not-subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status NÃO COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.not-subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status NÃO COMPROU
+										.status-changed Desde 26 jan 2017
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-name Tillie Rodriquez
+									td
+										.user-mail nome.sobrenome@gmail.com
+											span.label.hover CLIQUE PARA COPIAR
+											span.label.copied COPIADO
+									td
+										.user-status COMPROU
+										.status-changed Desde 26 jan 2017
+						ul.pagination
+							li.disabled
+								a(href="#!")
+									i.material-icons chevron_left
+							li.active
+								a(href="#!") 1
+							li.waves-effect
+								a(href="#!") 2
+							li.waves-effect
+								a(href="#!") 3
+							li.waves-effect
+								a(href="#!") 4
+							li.waves-effect
+								a(href="#!") 5
+							li.waves-effect
+								a(href="#!") 6
+							li.waves-effect
+								a(href="#!") 7
+							li.waves-effect
+								a(href="#!") ...
+							li.waves-effect
+								a(href="#!") 12
+							li.waves-effect
+								a(href="#!")
+									i.material-icons chevron_right
+		script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js")
+		script(src="assets/js/reports.js")

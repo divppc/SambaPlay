@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"/>
+    <title>Register</title>
+  </head>
+  <body style="background: url('http://pipsum.com/2000x2000') no-repeat center / cover" class="blured">
+    <div id="modal" class="modal step1 social-register">
+      <div class="modal-content">
+        <div class="user-avatar"><img src="http://pipsum.com/100x100" alt=""/></div>
+        <h1>Olá, Ana Bragança!</h1>
+        <p>Seu cadastro está quase completo. Responda estas perguntas abaixo e já poderá entrar.</p>
+        <form action="#" class="register-form">
+          <div class="main-part">
+            <div class="input-field">
+              <select id="select" name="select">
+                <option value="0" selected="selected" disabled="disabled">Você é um(a) fotógrafo(a) profissional?</option>
+                <option value="yes">Sim</option>
+                <option value="no">Não</option>
+              </select>
+            </div>
+          </div>
+          <div class="second-part">
+            <div class="two-column">
+              <div class="input-field">
+                <input type="text" id="post" required="required" class="validate"/>
+                <label for="post">CEP</label>
+              </div>
+              <div class="input-field">
+                <select id="uf" name="uf" class="validate">
+                  <option value="0" selected="selected" disabled="disabled">UF</option>
+                  <option value="mg">MG</option>
+                  <option value="mg">MG</option>
+                  <option value="mg">MG</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-field">
+              <input type="text" id="street" required="required" class="validate"/>
+              <label for="street">Rua</label>
+            </div>
+            <div class="two-column">
+              <div class="input-field">
+                <input type="text" id="number" required="required" class="validate"/>
+                <label for="number">Número</label>
+              </div>
+              <div class="input-field">
+                <input type="password" id="number_additional" required="required" class="validate"/>
+                <label for="number_additional">Complemento</label>
+              </div>
+            </div>
+            <div class="two-column">
+              <div class="input-field">
+                <input type="text" id="neighborhood" required="required" class="validate"/>
+                <label for="neighborhood">Bairro</label>
+              </div>
+              <div class="input-field">
+                <input type="password" id="city" required="required" class="validate"/>
+                <label for="city">Cidade</label>
+              </div>
+            </div>
+          </div>
+          <ul class="form-steps">
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="user-agreement">
+            <input type="checkbox" id="user-agreement"/>
+            <label for="user-agreement">Eu li e aceito os <a href="#">Termos de Uso</a>.</label>
+          </div>
+          <button type="submit" class="btn waves-effect waves-light disabled">CADASTRAR</button>
+        </form>
+        <button type="button" class="step next-step waves-effect waves-light btn"><i class="material-icons">arrow_forward</i></button>
+        <button type="button" class="step prev-step waves-effect waves-light btn"><i class="material-icons">arrow_back</i></button>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

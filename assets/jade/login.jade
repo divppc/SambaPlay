@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		meta(charset="UTF-8")
+		link(rel="stylesheet", href="https://necolas.github.io/normalize.css/3.0.2/normalize.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css")
+		link(rel="stylesheet", href="style.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,500")
+		title Login
+	body.blured(style="background: url('http://pipsum.com/2000x2000') no-repeat center / cover")
+		.modal#modal
+			.note Não tem conta? <a href="#">Cadastre-se</a>
+			.modal-content
+				h1 Login
+				form(action="#" class="login-form")
+					.input-field
+						input(type="email" placeholder="E-mail" required class="validate")
+					.input-field
+						input(type="password" placeholder="Senha" required class="validate")
+					.forgot-password
+						a(href="#") Esqueceu sua senha?
+					button(type="submit" class="btn disabled waves-effect waves-light") ENTRAR
+			.social-login
+				span Entrar usando
+				a(href="#" title="Entrar usando Facebook")
+					img(src="assets/images/facebook.svg", alt="Entrar usando Facebook" class="img-responsive")
+		script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js")
+		script(src="assets/js/main.js")

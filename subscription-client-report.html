@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500"/>
+    <title>Subscription client report</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>header</header>
+      <div class="panel">
+        <aside>sidebar</aside>
+        <section class="report subscription-client-report">
+          <div class="top-panel">
+            <h1 class="report-heading">CLIENTES</h1>
+            <div class="download-report">
+              <div class="report-search"><a href="#" class="show-search"><i class="material-icons">search</i></a>
+                <input type="text" placeholder="Buscar…"/>
+              </div>
+              <div class="download-button"><a href="#" class="waves-effect waves-light"><i class="material-icons">file_download</i><span>Baixar relatório</span></a></div>
+            </div>
+          </div>
+          <div class="stat-panel">
+            <div class="stat total">
+              <div class="info">
+                <div class="info-icon"></div>
+                <div class="tooltip">
+                  <p>Este é o número total de pessoas cadastradas no seu site. Estas pessoas se dividem nas categorias <b>Assinantes, Não Assinantes, Trial, Trials Cancelados e Cancelados. </b></p>
+                </div>
+              </div>
+              <div class="changes positive"><i class="material-icons">arrow_upward</i><span>Aumentou 3,5% na última semana</span></div>
+              <div class="value">219.805</div>
+              <div class="stat-title">Usuários</div>
+            </div>
+            <div class="stat active">
+              <div class="info">
+                <div class="info-icon"></div>
+                <div class="tooltip">
+                  <p>Esta é a porcentagem de pessoas que pagam para ver seu conteúdo.</p>
+                </div>
+              </div>
+              <div class="changes negative"><i class="material-icons">arrow_downward</i><span>Diminuiu 2% na última semana</span></div>
+              <div class="value">51%</div>
+              <div class="stat-title">Assinantes</div>
+              <div class="status-line">
+                <div class="active-part"></div>
+                <div class="counter">112.100</div>
+              </div>
+            </div>
+            <div class="stat inactive">
+              <div class="info">
+                <div class="info-icon"></div>
+                <div class="tooltip">
+                  <p>	<b>Não Assinantes</b> são as pessoas que se cadastraram no seu site mas ainda não assinam.</p>
+                  <p>	<b>Trial</b> são as pessoas que já consomem seu conteúdo mas ainda estão no período de teste gratuito.</p>
+                </div>
+              </div>
+              <div class="inactive-stat not-subscribers">
+                <div class="stat-data">
+                  <div class="value">12%</div>
+                  <div class="stat-title">Não Assinantes</div>
+                </div>
+                <div class="status-line">
+                  <div class="active-part"></div>
+                  <div class="counter">26.736</div>
+                </div>
+              </div>
+              <div class="inactive-stat trial">
+                <div class="stat-data">
+                  <div class="value">22%</div>
+                  <div class="stat-title">Trial</div>
+                </div>
+                <div class="status-line">
+                  <div class="active-part"></div>
+                  <div class="counter">48.375</div>
+                </div>
+              </div>
+            </div>
+            <div class="stat inactive">
+              <div class="info">
+                <div class="info-icon"></div>
+                <div class="tooltip">
+                  <p><b>Trials Cancelados</b> são as pessoas que começaram a consumir seu conteúdo em período de teste gratiuto mas cancelaram a assinatura antes de efetuar um pagamento.</p>
+                  <p><b>Cancelados</b> são as pessoas que assinavam seu conteúdo e depois cancelaram a assinatura.</p>
+                </div>
+              </div>
+              <div class="inactive-stat trial-canceled">
+                <div class="stat-data">
+                  <div class="value">8%</div>
+                  <div class="stat-title">Trials Cancelados</div>
+                </div>
+                <div class="status-line">
+                  <div class="active-part"></div>
+                  <div class="counter">17.584</div>
+                </div>
+              </div>
+              <div class="inactive-stat canceled">
+                <div class="stat-data">
+                  <div class="value">72%</div>
+                  <div class="stat-title">Cancelados</div>
+                </div>
+                <div class="status-line">
+                  <div class="active-part"></div>
+                  <div class="counter">15.386</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="users">
+            <div class="filters">
+              <ul>
+                <li class="all"><a href="#" class="active">Todos</a></li>
+                <li class="not-subscribers"><a href="#">Não Assinam</a></li>
+                <li class="trial"><a href="#">Trial</a></li>
+                <li class="subscribers"><a href="#">Assinam</a></li>
+                <li class="trial-canceled"><a href="#">Trial Cancelados</a></li>
+                <li class="canceled"><a href="#">Cancelados</a></li>
+              </ul>
+              <div class="copy-all">
+                <div class="copied">E-MAILS COPIADOS</div><a href="#" data-position="top" data-tooltip="Clique para copiar os endereços de e-mail mostrados no filtro ao lado." class="waves-effect waves-light tooltipped"><i class="material-icons">content_copy</i><span>Copiar e-mails</span></a>
+              </div>
+            </div>
+            <table class="report-users client-report">
+              <thead>
+                <tr>
+                  <td><a href="#" class="active"><span>NOME</span><i class="material-icons">keyboard_arrow_up</i></a></td>
+                  <td><a href="#">E-MAIL</a></td>
+                  <td><a href="#"> <span>STATUS</span><i class="material-icons">keyboard_arrow_down</i></a></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">ATIVO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client not-subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">INATIVO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client not-subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">INATIVO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client trial">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">trial</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client not-subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">INATIVO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client trial-canceled">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">TRIAL CANCELADO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">ATIVO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">ATIVO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">ATIVO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client canceled">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">CANCELADO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client not-subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">INATIVO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">ATIVO</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client trial">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-name">Tillie Rodriquez</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-mail">nome.sobrenome@gmail.com<span class="label hover">CLIQUE PARA COPIAR</span><span class="label copied">COPIADO</span></div>
+                  </td>
+                  <td>
+                    <div class="user-status">trial</div>
+                    <div class="status-changed">Desde 26 jan 2017</div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="3" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial">
+                      <div class="status-name">TRIAL</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status trial-canceled">
+                      <div class="status-name">TRIAL CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">ATIVO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status canceled">
+                      <div class="status-name">CANCELADO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <ul class="pagination">
+              <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+              <li class="active"><a href="#!">1</a></li>
+              <li class="waves-effect"><a href="#!">2</a></li>
+              <li class="waves-effect"><a href="#!">3</a></li>
+              <li class="waves-effect"><a href="#!">4</a></li>
+              <li class="waves-effect"><a href="#!">5</a></li>
+              <li class="waves-effect"><a href="#!">6</a></li>
+              <li class="waves-effect"><a href="#!">7</a></li>
+              <li class="waves-effect"><a href="#!">...</a></li>
+              <li class="waves-effect"><a href="#!">12</a></li>
+              <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="assets/js/reports.js"></script>
+  </body>
+</html>

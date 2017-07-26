@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		meta(charset="UTF-8")
+		link(rel="stylesheet", href="https://necolas.github.io/normalize.css/3.0.2/normalize.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css")
+		link(rel="stylesheet", href="style.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,500")
+		title Admin Panel
+	body
+		.container
+			header header
+			.panel
+				aside sidebar
+				section
+					.additional-field
+						h1 CAMPO ADICIONAL
+						p.
+							Você pode adicionar novos campos para os assinantes responderem no momento do cadastro.
+						p.
+							Os campos adicionados podem ser do tipo “Resposta Curta” ou “Menu de opções”.
+						form(action="#" class="panel-form")
+							.form_note * Campos obrigatórios
+							.fields
+								.field.default
+									.input-field
+										a(href="#" class="prefix required tooltipped" data-position="top" data-tooltip="Campo obrigatório") *
+										input(type="text" value="Nome")
+									.field-options
+										.field-type
+											.current-field-type Resposta Curta
+								.field.default
+									.input-field
+										a(href="#" class="prefix required tooltipped" data-position="top"  data-tooltip="Campo obrigatório") *
+										input(type="text" value="Sobrenome")
+									.field-options
+										.field-type
+											.current-field-type Resposta Curta
+								.field.default
+									.input-field
+										a(href="#" class="prefix required tooltipped" data-position="top"  data-tooltip="Campo obrigatório") *
+										input(type="text" value="Email")
+									.field-options
+										.field-type
+											.current-field-type Resposta Curta
+								.field.default
+									.input-field
+										a(href="#" class="prefix required tooltipped" data-position="top" data-tooltip="Campo obrigatório") *
+										input(type="text" value="Senha")
+									.field-options
+										.field-type
+											.current-field-type Resposta Curta
+							a(href="#" class="new-field") Adicionar novo campo
+							.attention
+								p Atenção
+								ul
+									li.
+										A cada cinco campos, uma nova página é criada no pop-up de cadastro.
+									li.
+										Lembre-se que um formulário muito grande pode causar desistência durante o preenchimento.
+							.input-field.save-form
+								a(href="#" class="btn") SALVAR
+					.address
+						.panel-head
+							.title
+								h2 ENDEREÇO
+								p.
+									Uma nova página com os campos obrigatórios abaixo será criada no pop-up de cadastro.
+							.switch
+								label(for="toggler")
+									span DESATIVADO
+									input(type="checkbox" id="toggler")
+									span.lever
+						.panel-content
+							form(action="#" class="adreess-form")
+								.row
+									.input-field
+										input(type="text" id="post" class="validate" required)
+										label(for="post") CEP
+									.input-field
+										select#uf(name="uf" class="validate")
+											option(value="0" selected disabled) UF
+											option(value="mg") MG
+											option(value="mg") MG
+											option(value="mg") MG
+									.input-field
+										input(type="text" id="street" class="validate" required)
+										label(for="street") Rua
+								.row
+									.input-field
+										input(type="text" id="number" class="validate" required)
+										label(for="number") Número
+									.input-field
+										input(type="password" id="number_additional" class="validate" required)
+										label(for="number_additional") Complemento
+									.input-field
+										input(type="text" id="neighborhood" class="validate" required)
+										label(for="neighborhood") Bairro
+									.input-field
+										input(type="password" id="city" class="validate" required)
+										label(for="city") Cidade
+							.attention
+								p Atenção
+								ul
+									li.
+										Lembre-se que um formulário muito grande pode causar desistência durante o preenchimento.
+		script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js")
+		script(src="assets/js/main.js")
+		script(src="assets/js/script.js")

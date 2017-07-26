@@ -1,0 +1,9 @@
+node_modules/
+source/
+plugins.txt
+gulpfile.js
+dist/
+*.rar
+SambaPlay_dist
+info.txt
+SambaPlay_dist.rar

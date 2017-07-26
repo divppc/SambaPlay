@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123" height="40" viewBox="0 0 123 40">
+    <g fill="none" fill-rule="evenodd">
+        <rect width="123" height="40" fill="#637BAD" rx="2"/>
+        <g fill="#FFF">
+            <text font-family="Roboto" font-size="14" font-weight="400" transform="translate(20 8)" style="font-family: 'Roboto', sans-serif;">
+                <tspan x="21" y="17">Facebook</tspan>
+            </text>
+            <path d="M30.57 20.01h-3.317V32h-4.916V20.01H20v-4.238h2.337V13.03c0-1.963.92-5.031 4.961-5.031l3.643.014v4.114h-2.644c-.43 0-1.043.218-1.043 1.154v2.49H31l-.43 4.238z"/>
+        </g>
+    </g>
+</svg>

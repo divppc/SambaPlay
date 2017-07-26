@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500"/>
+    <title>Admin Panel</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>header</header>
+      <div class="panel">
+        <aside>sidebar</aside>
+        <section>
+          <div class="additional-field">
+            <h1>CAMPO ADICIONAL</h1>
+            <p>Você pode adicionar novos campos para os assinantes responderem no momento do cadastro.</p>
+            <p>Os campos adicionados podem ser do tipo “Resposta Curta” ou “Menu de opções”.</p>
+            <form action="#" class="panel-form">
+              <div class="form_note">* Campos obrigatórios</div>
+              <div class="fields">
+                <div class="field default">
+                  <div class="input-field"><a href="#" data-position="top" data-tooltip="Campo obrigatório" class="prefix required tooltipped">*</a>
+                    <input type="text" value="Nome"/>
+                  </div>
+                  <div class="field-options">
+                    <div class="field-type">
+                      <div class="current-field-type">Resposta Curta</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field default">
+                  <div class="input-field"><a href="#" data-position="top" data-tooltip="Campo obrigatório" class="prefix required tooltipped">*</a>
+                    <input type="text" value="Sobrenome"/>
+                  </div>
+                  <div class="field-options">
+                    <div class="field-type">
+                      <div class="current-field-type">Resposta Curta</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field default">
+                  <div class="input-field"><a href="#" data-position="top" data-tooltip="Campo obrigatório" class="prefix required tooltipped">*</a>
+                    <input type="text" value="Email"/>
+                  </div>
+                  <div class="field-options">
+                    <div class="field-type">
+                      <div class="current-field-type">Resposta Curta</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field default">
+                  <div class="input-field"><a href="#" data-position="top" data-tooltip="Campo obrigatório" class="prefix required tooltipped">*</a>
+                    <input type="text" value="Senha"/>
+                  </div>
+                  <div class="field-options">
+                    <div class="field-type">
+                      <div class="current-field-type">Resposta Curta</div>
+                    </div>
+                  </div>
+                </div>
+              </div><a href="#" class="new-field">Adicionar novo campo</a>
+              <div class="attention">
+                <p>Atenção</p>
+                <ul>
+                  <li>A cada cinco campos, uma nova página é criada no pop-up de cadastro.</li>
+                  <li>Lembre-se que um formulário muito grande pode causar desistência durante o preenchimento.</li>
+                </ul>
+              </div>
+              <div class="input-field save-form"><a href="#" class="btn">SALVAR</a></div>
+            </form>
+          </div>
+          <div class="address">
+            <div class="panel-head">
+              <div class="title">
+                <h2>ENDEREÇO</h2>
+                <p>Uma nova página com os campos obrigatórios abaixo será criada no pop-up de cadastro.</p>
+              </div>
+              <div class="switch">
+                <label for="toggler"><span>DESATIVADO</span>
+                  <input type="checkbox" id="toggler"/><span class="lever"></span>
+                </label>
+              </div>
+            </div>
+            <div class="panel-content">
+              <form action="#" class="adreess-form">
+                <div class="row">
+                  <div class="input-field">
+                    <input type="text" id="post" required="required" class="validate"/>
+                    <label for="post">CEP</label>
+                  </div>
+                  <div class="input-field">
+                    <select id="uf" name="uf" class="validate">
+                      <option value="0" selected="selected" disabled="disabled">UF</option>
+                      <option value="mg">MG</option>
+                      <option value="mg">MG</option>
+                      <option value="mg">MG</option>
+                    </select>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" id="street" required="required" class="validate"/>
+                    <label for="street">Rua</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field">
+                    <input type="text" id="number" required="required" class="validate"/>
+                    <label for="number">Número</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="password" id="number_additional" required="required" class="validate"/>
+                    <label for="number_additional">Complemento</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" id="neighborhood" required="required" class="validate"/>
+                    <label for="neighborhood">Bairro</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="password" id="city" required="required" class="validate"/>
+                    <label for="city">Cidade</label>
+                  </div>
+                </div>
+              </form>
+              <div class="attention">
+                <p>Atenção</p>
+                <ul>
+                  <li>Lembre-se que um formulário muito grande pode causar desistência durante o preenchimento.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
