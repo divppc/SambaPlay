@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		meta(charset="UTF-8")
+		link(rel="stylesheet", href="https://necolas.github.io/normalize.css/3.0.2/normalize.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css")
+		link(rel="stylesheet", href="style.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,500")
+		title Transactional finance report
+	body
+		.container
+			header header
+			.panel
+				aside sidebar
+				section.report.transactional-finance-report
+					.top-panel
+						h1.report-heading FINANCEIRO
+						.download-report
+							.report-search
+								a(href="#" class="show-search")
+									i.material-icons search
+								input(type="text" placeholder="Buscar…")
+							.download-button
+								a(href="#" class="waves-effect waves-light")
+									i.material-icons file_download
+									span Baixar relatório
+					.stat-panel
+						.stat.month-sales
+							.info
+								.info-icon
+								.tooltip
+									p.
+										Este é o faturamento bruto do mês corrente e dos dois últimos meses. Dedução de custos e impostos não estão demonstrados.
+							.current-month
+								.month-value
+									span R$
+									b 1.935,00
+								.month-title Faturamento em julho
+							.prev-months
+								.prev-month
+									.month-value R$ 21.126,00
+									.month-title em junho
+								.prev-month
+									.month-value R$ 21.126,00
+									.month-title em maio
+						.stat.sales
+							.info
+								.info-icon
+								.tooltip
+									p.
+										Estes são os números totais de vendas no mês corrente e nos dois últimos meses.
+							.stat-title Vendas
+							.months
+								.month
+									.month-name jul
+									.month-value 1.100.035
+								.month
+									.month-name jun
+									.month-value 800.035
+								.month
+									.month-name mai
+									.month-value 920.345
+						.stat.media
+							.info
+								.info-icon
+								.tooltip
+									p.
+										Estes são os números médios de gastos em reais e quantidade de coleções por usuário que executou uma compra.
+							.stat-title Média
+							.profit-data
+								.profit
+									.profit-value R$ 250,00
+									.profit-name por cliente
+								.profit
+									.profit-value 2,3 Coleções
+									.profit-name por cliente
+						.stat.total-profit
+							.info
+								.info-icon
+								.tooltip
+									p.
+										Este é o seu faturamento total desde o começo do seu produto.
+							.profit-value R$ 219.356,00
+							.stat-title Faturamento total
+							canvas#profit-chart(width='215', height="90")
+					.users
+						.filters
+							.users-filter
+								span Filtrar:
+								.view
+									.current-view
+										span Últimos 15 dias
+										i.material-icons keyboard_arrow_down
+									ul.view-list
+										li
+											a(href="#!") Últimos 15 dias
+										li
+											a(href="#!") Últimos 30 dias
+										li
+											a(href="#!") Últimos 60 dias
+										li
+											a(href="#!") Últimos 90 dias
+										li
+											a(href="#!") Customizado
+							.custom-date
+								span De:
+								input(type="text" class="browser-default datepicker" placeholder="31 set 2017")
+								span a
+								input(type="text" class="browser-default datepicker" placeholder="8 ago 2017")
+						table.report-users.finance-report
+							thead
+								tr
+									td
+										a(href="#" class="active")
+											span NOME
+											i.material-icons keyboard_arrow_up
+									td
+										a(href="#") 
+											span COLEÇÕES
+											i.material-icons keyboard_arrow_down
+									td
+										a(href="#") 
+											span DATA
+											i.material-icons keyboard_arrow_down
+									td
+										a(href="#") 
+											span VALOR
+											i.material-icons keyboard_arrow_down
+							tbody
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+												img(src="http://pipsum.com/40x40", alt="")
+												img(src="http://pipsum.com/30x30", alt="")
+											.collections-count 5 
+												span coleções
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+											.profit-count 5x R$ 254,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+												img(src="http://pipsum.com/40x40", alt="")
+												img(src="http://pipsum.com/30x30", alt="")
+											.collections-count 2 
+												span coleções
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+								tr.client.canceled
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+												img(src="http://pipsum.com/40x40", alt="")
+												img(src="http://pipsum.com/30x30", alt="")
+											.collections-count 5 
+												span coleções
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+											.profit-count 5x R$ 254,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+												img(src="http://pipsum.com/40x40", alt="")
+												img(src="http://pipsum.com/30x30", alt="")
+											.collections-count 2 
+												span coleções
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+								tr.client.canceled
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+												img(src="http://pipsum.com/40x40", alt="")
+												img(src="http://pipsum.com/30x30", alt="")
+											.collections-count 5 
+												span coleções
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+											.profit-count 5x R$ 254,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+								tr.client.subscribed
+									td
+										.user
+											.user-photo
+												img(src="http://pipsum.com/100x100", alt="")
+											.user-data
+												.user-name Roy Bradley
+												.user-mail nome.sobrenome@gmail.com
+									td
+										.collections
+											.collections-preview
+												img(src="http://pipsum.com/50x50", alt="")
+												img(src="http://pipsum.com/40x40", alt="")
+												img(src="http://pipsum.com/30x30", alt="")
+											.collections-count 2 
+												span coleções
+									td
+										.user-data 22 jul 2017
+									td
+										.user-profit
+											.profit-value R$ 1.270,00
+								tr.client-details
+									td(colspan='4' class="clearfix")
+										.status.register
+											.status-name CADASTRO
+											.date 18 jan 2017
+										.status.active
+											.status-name Compra
+											.date 18 jan 2017
+										ul.client-collection
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+											li
+												.collection-image
+													img(src="http://pipsum.com/80x40", alt="")
+												.collection-name Nome de coleção bem grande mes…
+						ul.pagination
+							li.disabled
+								a(href="#!")
+									i.material-icons chevron_left
+							li.active
+								a(href="#!") 1
+							li.waves-effect
+								a(href="#!") 2
+							li.waves-effect
+								a(href="#!") 3
+							li.waves-effect
+								a(href="#!") 4
+							li.waves-effect
+								a(href="#!") 5
+							li.waves-effect
+								a(href="#!") 6
+							li.waves-effect
+								a(href="#!") 7
+							li.waves-effect
+								a(href="#!") ...
+							li.waves-effect
+								a(href="#!") 12
+							li.waves-effect
+								a(href="#!")
+									i.material-icons chevron_right
+		script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js")
+		script(src="assets/js/reports.js")

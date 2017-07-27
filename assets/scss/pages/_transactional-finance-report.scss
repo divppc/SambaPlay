@@ -1,0 +1,395 @@
+.transactional-finance-report {
+
+	.stat-panel {
+		opacity: .9;
+	}
+
+	.month-sales {
+		width: 275px;
+		min-height: 160px;
+		padding: 30px 20px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.tooltip {
+			min-width: 126px;
+		}
+
+		.current-month {			
+
+			.month-value {
+				display: flex;
+				align-items: baseline;
+				margin-bottom: 3px;
+
+				span {
+					font-size: 26px;
+				  font-weight: bold;
+				  line-height: 1;
+				  color: #4a4a4a;
+				  padding-right: 4px;
+				}
+
+				b {
+					font-size: 35px;
+				  font-weight: bold;
+				  line-height: 1;
+				  text-align: left;
+				  color: #4a4a4a;
+				}
+			}
+
+			.month-title {
+				font-size: 12px;
+			  line-height: 1;
+			  text-align: left;
+			  color: #fda259;
+			}
+		}
+
+		.prev-months {
+			display: flex;
+			align-items: center;
+
+			.prev-month {
+
+				&:first-child {
+					margin-right: 42px;
+
+					.month-title {
+						color: #2face9;
+					}
+				}
+
+				&:last-child {
+
+					.month-title {
+						color: #fe4d6f;
+					}
+				}
+			}
+
+			.month-value {
+				font-size: 12px;
+			  font-weight: 900;
+			  line-height: 1;
+			  color: #4a4a4a;
+			  margin-bottom: 3px;
+			}
+
+			.month-title {
+				font-size: 10px;
+			  line-height: 1;
+			  letter-spacing: 0.4px;
+			  text-align: left;
+			}
+		}
+	}
+
+	.stat-title {
+		font-size: 12px;
+	  line-height: 1;
+	  color: #9b9b9b;
+	}
+
+	.sales {
+		width: 150px;
+		padding: 30px 10px 20px 20px;
+
+		.tooltip {
+			min-width: 115px;
+		}
+
+		.stat-title {
+		  margin-bottom: 20px;
+		}
+
+		.month {
+			display: flex;
+			align-items: baseline;
+
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			&:first-child {
+
+				.month-name {
+					color: #fda259;
+				}
+
+				.month-value {
+					font-size: 18px;
+				  font-weight: 900;
+				}
+			}
+
+			&:nth-child(2) {
+
+				.month-name {
+					color: #2face9;
+				}
+
+				.month-value {
+					font-size: 16px;
+					opacity: .54;
+				  font-weight: bold;
+				}
+			}
+
+			&:nth-child(3) {
+
+				.month-name {
+					color: #fe4d6f;
+				}
+
+				.month-value {
+					font-size: 14px;
+					opacity: .36;
+				  font-weight: 500;
+				}
+			}
+		}
+
+		.month-name {
+			font-size: 10px;
+		  line-height: 1;
+		  letter-spacing: 0.4px;
+			min-width: 25px;
+		}
+
+		.month-value {
+			color: #4a4a4a;
+			line-height: 1;
+		}
+	}
+
+	.media {
+		width: 150px;
+		padding: 30px 10px 20px 20px;
+
+		.tooltip {
+			min-width: 111px;
+		}
+
+		.stat-title {
+			margin-bottom: 15px;
+		}
+
+		.profit-value {
+		  font-weight: bold;
+		  line-height: 1;
+		  color: #4a4a4a;
+		}
+
+		.profit-name {
+		  line-height: 1;
+		  color: #9b9b9b;
+		}
+
+		.profit {
+
+			&:first-child {
+				margin-bottom: 20px;
+
+				.profit-value {
+					font-size: 20px;
+				}
+
+				.profit-name {
+					font-size: 12px;
+				}
+			}
+
+			&:nth-child(2) {
+
+				.profit-value {
+					font-size: 14px;
+				}
+
+				.profit-name {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+
+	.total-profit {
+		width: 275px;
+		padding: 20px 30px 10px;
+
+		.tooltip {
+			min-width: 111px;
+		}
+
+		.profit-value {
+			font-size: 18px;
+		  font-weight: bold;
+		  line-height: 1;
+		  margin-bottom: 3px;
+		  color: #4a4a4a;
+		}
+	}
+
+	.users {
+		padding: 10px 20px 20px;
+	}
+
+	.filters {
+    justify-content: flex-start;
+	}
+}
+
+
+.finance-report {
+	table-layout: fixed;
+
+	.user-profit {
+
+		.profit-value {
+			font-size: 14px;
+		  font-weight: bold;
+		  line-height: 1;
+		  letter-spacing: 0.2px;
+		  color: #4a4a4a;
+		  margin-bottom: 3px;
+		}
+
+		.profit-count {
+			font-size: 11px;
+		  line-height: 1;
+		  letter-spacing: 0.2px;
+		  text-align: center;
+		  color: #9b9b9b;
+		}
+	}
+
+	.canceled {
+
+		.profit-value {
+			color: #fe4d6f;
+			text-decoration: line-through;
+		}
+	}
+
+	.collections {
+		position: relative;
+
+		.collections-count {
+			font-size: 11px;
+			position: absolute;
+			top: 0;
+			left: calc(50% + 17px);
+		  line-height: 1;
+		  letter-spacing: 0.2px;
+		  color: #9b9b9b;
+		  text-align: left;
+
+		  span {
+		  	display: block;
+		  }
+		}
+
+		.collections-preview {
+			position: relative;
+			user-select: none;
+			width: 22px;
+			height: 22px;
+			margin: 0 auto;
+
+			img {
+				display: block;
+				border-radius: 2px;
+
+				&:first-child {
+					width: 100%;
+					height: 100%;
+					z-index: 2;
+					position: relative;
+				}
+
+				&:nth-child(2) {
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					top: 1px;
+					opacity: .8;
+					z-index: 1;
+					left: -5px;
+				}
+
+				&:nth-child(3) {
+					width: 18px;
+					height: 18px;
+					position: absolute;
+					top: 2px;
+					opacity: .6;
+					z-index: 0;
+					left: -10px;
+				}
+			}
+		}
+	}
+
+	.client-details {
+
+		td {
+
+			&>div:not(.client-collection) {
+				width: 33%;
+			}
+		}
+
+		.client-collection {
+			width: 100%;
+			max-width: 100%;
+			display: flex;
+			margin: 0;
+			flex-wrap: wrap;
+			border-bottom: 0;
+			max-height: 0px;
+			overflow: hidden;
+
+			li {
+				display: flex;
+				width: calc((100%/3) - (80px/3));
+				align-items: center;
+
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+
+				&:not(:nth-child(3n+3)) {
+					margin-right: 40px;
+				}
+			}
+		}
+
+		.collection-image {
+			width: 40px;
+			height: 15px;
+			border-radius: 2px;
+			overflow: hidden;
+			margin-right: 5px;
+			flex-shrink: 0;
+
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.collection-name {
+			font-size: 12px;
+		  line-height: 1;
+		  text-align: left;
+		  color: #4a4a4a;
+		  white-space: nowrap;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		}
+	}
+}

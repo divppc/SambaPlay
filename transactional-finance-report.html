@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500"/>
+    <title>Transactional finance report</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>header</header>
+      <div class="panel">
+        <aside>sidebar</aside>
+        <section class="report transactional-finance-report">
+          <div class="top-panel">
+            <h1 class="report-heading">FINANCEIRO</h1>
+            <div class="download-report">
+              <div class="report-search"><a href="#" class="show-search"><i class="material-icons">search</i></a>
+                <input type="text" placeholder="Buscar…"/>
+              </div>
+              <div class="download-button"><a href="#" class="waves-effect waves-light"><i class="material-icons">file_download</i><span>Baixar relatório</span></a></div>
+            </div>
+          </div>
+          <div class="stat-panel">
+            <div class="stat month-sales">
+              <div class="info">
+                <div class="info-icon"></div>
+                <div class="tooltip">
+                  <p>Este é o faturamento bruto do mês corrente e dos dois últimos meses. Dedução de custos e impostos não estão demonstrados.</p>
+                </div>
+              </div>
+              <div class="current-month">
+                <div class="month-value"><span>R$</span><b>1.935,00</b></div>
+                <div class="month-title">Faturamento em julho</div>
+              </div>
+              <div class="prev-months">
+                <div class="prev-month">
+                  <div class="month-value">R$ 21.126,00</div>
+                  <div class="month-title">em junho</div>
+                </div>
+                <div class="prev-month">
+                  <div class="month-value">R$ 21.126,00</div>
+                  <div class="month-title">em maio</div>
+                </div>
+              </div>
+            </div>
+            <div class="stat sales">
+              <div class="info">
+                <div class="info-icon"></div>
+                <div class="tooltip">
+                  <p>Estes são os números totais de vendas no mês corrente e nos dois últimos meses.</p>
+                </div>
+              </div>
+              <div class="stat-title">Vendas</div>
+              <div class="months">
+                <div class="month">
+                  <div class="month-name">jul</div>
+                  <div class="month-value">1.100.035</div>
+                </div>
+                <div class="month">
+                  <div class="month-name">jun</div>
+                  <div class="month-value">800.035</div>
+                </div>
+                <div class="month">
+                  <div class="month-name">mai</div>
+                  <div class="month-value">920.345</div>
+                </div>
+              </div>
+            </div>
+            <div class="stat media">
+              <div class="info">
+                <div class="info-icon"></div>
+                <div class="tooltip">
+                  <p>Estes são os números médios de gastos em reais e quantidade de coleções por usuário que executou uma compra.</p>
+                </div>
+              </div>
+              <div class="stat-title">Média</div>
+              <div class="profit-data">
+                <div class="profit">
+                  <div class="profit-value">R$ 250,00</div>
+                  <div class="profit-name">por cliente</div>
+                </div>
+                <div class="profit">
+                  <div class="profit-value">2,3 Coleções</div>
+                  <div class="profit-name">por cliente</div>
+                </div>
+              </div>
+            </div>
+            <div class="stat total-profit">
+              <div class="info">
+                <div class="info-icon"></div>
+                <div class="tooltip">
+                  <p>Este é o seu faturamento total desde o começo do seu produto.</p>
+                </div>
+              </div>
+              <div class="profit-value">R$ 219.356,00</div>
+              <div class="stat-title">Faturamento total</div>
+              <canvas id="profit-chart" width="215" height="90"></canvas>
+            </div>
+          </div>
+          <div class="users">
+            <div class="filters">
+              <div class="users-filter"><span>Filtrar:</span>
+                <div class="view">
+                  <div class="current-view"><span>Últimos 15 dias</span><i class="material-icons">keyboard_arrow_down</i></div>
+                  <ul class="view-list">
+                    <li><a href="#!">Últimos 15 dias</a></li>
+                    <li><a href="#!">Últimos 30 dias</a></li>
+                    <li><a href="#!">Últimos 60 dias</a></li>
+                    <li><a href="#!">Últimos 90 dias</a></li>
+                    <li><a href="#!">Customizado</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="custom-date"><span>De:</span>
+                <input type="text" placeholder="31 set 2017" class="browser-default datepicker"/><span>a</span>
+                <input type="text" placeholder="8 ago 2017" class="browser-default datepicker"/>
+              </div>
+            </div>
+            <table class="report-users finance-report">
+              <thead>
+                <tr>
+                  <td><a href="#" class="active"><span>NOME</span><i class="material-icons">keyboard_arrow_up</i></a></td>
+                  <td><a href="#"> <span>COLEÇÕES</span><i class="material-icons">keyboard_arrow_down</i></a></td>
+                  <td><a href="#"> <span>DATA</span><i class="material-icons">keyboard_arrow_down</i></a></td>
+                  <td><a href="#"> <span>VALOR</span><i class="material-icons">keyboard_arrow_down</i></a></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/><img src="http://pipsum.com/40x40" alt=""/><img src="http://pipsum.com/30x30" alt=""/></div>
+                      <div class="collections-count">5 <span>coleções</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                      <div class="profit-count">5x R$ 254,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/><img src="http://pipsum.com/40x40" alt=""/><img src="http://pipsum.com/30x30" alt=""/></div>
+                      <div class="collections-count">2 <span>coleções</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="client canceled">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/><img src="http://pipsum.com/40x40" alt=""/><img src="http://pipsum.com/30x30" alt=""/></div>
+                      <div class="collections-count">5 <span>coleções</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                      <div class="profit-count">5x R$ 254,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/><img src="http://pipsum.com/40x40" alt=""/><img src="http://pipsum.com/30x30" alt=""/></div>
+                      <div class="collections-count">2 <span>coleções</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="client canceled">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/><img src="http://pipsum.com/40x40" alt=""/><img src="http://pipsum.com/30x30" alt=""/></div>
+                      <div class="collections-count">5 <span>coleções</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                      <div class="profit-count">5x R$ 254,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="client subscribed">
+                  <td>
+                    <div class="user">
+                      <div class="user-photo"><img src="http://pipsum.com/100x100" alt=""/></div>
+                      <div class="user-data">
+                        <div class="user-name">Roy Bradley</div>
+                        <div class="user-mail">nome.sobrenome@gmail.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collections">
+                      <div class="collections-preview"><img src="http://pipsum.com/50x50" alt=""/><img src="http://pipsum.com/40x40" alt=""/><img src="http://pipsum.com/30x30" alt=""/></div>
+                      <div class="collections-count">2 <span>coleções</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="user-data">22 jul 2017</div>
+                  </td>
+                  <td>
+                    <div class="user-profit">
+                      <div class="profit-value">R$ 1.270,00</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="client-details">
+                  <td colspan="4" class="clearfix">
+                    <div class="status register">
+                      <div class="status-name">CADASTRO</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <div class="status active">
+                      <div class="status-name">Compra</div>
+                      <div class="date">18 jan 2017</div>
+                    </div>
+                    <ul class="client-collection">
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                      <li>
+                        <div class="collection-image"><img src="http://pipsum.com/80x40" alt=""/></div>
+                        <div class="collection-name">Nome de coleção bem grande mes…</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <ul class="pagination">
+              <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+              <li class="active"><a href="#!">1</a></li>
+              <li class="waves-effect"><a href="#!">2</a></li>
+              <li class="waves-effect"><a href="#!">3</a></li>
+              <li class="waves-effect"><a href="#!">4</a></li>
+              <li class="waves-effect"><a href="#!">5</a></li>
+              <li class="waves-effect"><a href="#!">6</a></li>
+              <li class="waves-effect"><a href="#!">7</a></li>
+              <li class="waves-effect"><a href="#!">...</a></li>
+              <li class="waves-effect"><a href="#!">12</a></li>
+              <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+    <script src="assets/js/reports.js"></script>
+  </body>
+</html>

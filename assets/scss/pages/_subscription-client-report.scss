@@ -748,10 +748,18 @@ section.report {
 
 					&+.client-details {
 						td {
+							border-bottom: 1px solid #efefef;
+
 							&>div {
 								max-height: 100vh;
 								overflow: visible;
 								padding: 15px 0;
+							}
+
+							&>ul {
+								max-height: 100vh;
+								overflow: visible;
+								padding: 0 20px 10px 20px;
 							}
 						}
 					}
@@ -893,7 +901,6 @@ section.report {
 	td {
 		width: 100%;
 		padding: 0;
-		border-bottom: 1px solid #efefef;
 
 		&>div {
 			width: 20%;

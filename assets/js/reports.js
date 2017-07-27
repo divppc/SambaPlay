@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	//show client info in table
-	$('.subscription-client-report .client, .subscription-finance-report .client').on('click', function(e) {
+	$('.report:not(.transactional-client-report) .client').on('click', function(e) {
 		if ($(e.target).hasClass('user-mail') == false) {
 			$(this).toggleClass('active');
 		}	
@@ -96,5 +96,67 @@ $(document).ready(function () {
     format: 'd !de mmmm !de yyyy',
     formatSubmit: 'yyyy/mm/dd'
   });
+});
 
+
+//profit chart
+
+	
+
+
+var draw = Chart.controllers.line.prototype.draw;
+Chart.controllers.line = Chart.controllers.line.extend({
+    draw: function() {
+        draw.apply(this, arguments);
+        var ctx = this.chart.chart.ctx;
+        var _stroke = ctx.stroke;
+        ctx.stroke = function() {
+            ctx.save();
+            ctx.shadowColor = 'rgb(133, 219, 94)';
+            ctx.shadowBlur = 4;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
+            _stroke.apply(this, arguments)
+            ctx.restore();
+        }
+    }
+})
+
+
+var ctx = document.getElementById("profit-chart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["", "", "", "", "", "", "", "", "", "",],
+        datasets: [{
+            data: [2, 4, 6, 6, 9, 12, 14, 14, 16, 19],
+            borderColor: 'rgb(133, 219, 94)',
+            borderWidth: 2,
+            fill: false,
+            pointRadius: 0
+        }]
+    },
+
+    options: {
+      scales: {
+          yAxes: [{
+          		display: false,
+          }],
+          xAxes: [{
+              gridLines: {
+                  display:false
+              }  
+          }]
+      },
+      fill: false,
+      legend: false,
+      layout: {
+      	padding: {
+              left: 0,
+              right: 0,
+              top: 15,
+              bottom: 0
+          }
+      }
+    }
 });
