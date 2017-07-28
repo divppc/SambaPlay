@@ -13,3 +13,5 @@ Subscription client report  http://sambaplay.div.agency/subscription-client-repo
 Transactional client report  http://sambaplay.div.agency/transactional-client-report.html<br>
 Subscription finance report  http://sambaplay.div.agency/subscription-finance-report.html<br>
 Transactional finance report  http://sambaplay.div.agency/transactional-finance-report.html<br>
+Client empty state http://sambaplay.div.agency/clients-empty-state.html<br>
+Finance empty state http://sambaplay.div.agency/finance-empty-state.html<br>
