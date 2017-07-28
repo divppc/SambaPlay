@@ -4,6 +4,17 @@
 		opacity: .9;
 	}
 
+	.report-users {
+		.client-details {
+			td {
+
+				&>div:not(.client-collection) {
+					width: 33%;
+				}
+			}
+		}
+	}
+
 	.month-sales {
 		width: 275px;
 		min-height: 160px;
@@ -333,13 +344,6 @@
 	}
 
 	.client-details {
-
-		td {
-
-			&>div:not(.client-collection) {
-				width: 33%;
-			}
-		}
 
 		.client-collection {
 			width: 100%;
