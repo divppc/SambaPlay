@@ -61,6 +61,7 @@
 
 		.info-icon {
 			background: #fff;
+			z-index: 2;
 
 			&:after {
 				color: #9b9b9b;
@@ -71,6 +72,17 @@
 	.photo {
 		overflow: hidden;
 		position: relative;
+
+		&:after {
+			display: block;
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0, .4);
+		}
 
 		&:hover {
 			img {
@@ -151,6 +163,7 @@
 	.photo-data {
 		width: 100%;
 		height: 100%;
+		z-index: 1;
 		position: absolute;
 		top: 0;
 		left: 0;
